@@ -1,118 +1,145 @@
 html,
 body {
+  min-height: 100vh;
   width: 100vw;
   max-width: 100%;
-  min-height: 100vh;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-html,
-body,
-div,
 nav,
-main,
-section {
+section,
+div,
+header,
+article,
+aside,
+main {
   box-sizing: border-box;
 }
 nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
   height: 70px;
+  width: 100%;
   background: #eee;
 }
-section {
-  height: 100%;
+.nav-box {
   width: 1280px;
   max-width: 100%;
-  padding: 0 20px;
+  height: 70px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .logo {
   font-size: 30px;
   font-weight: 900;
 }
 .search-bar {
   height: 30px;
-  width: 600px;
-  max-width: 60%;
+  width: 500px;
+  max-width: 50%;
   background: #ccc;
 }
 .menu {
-  margin-left: auto;
   display: flex;
+  align-items: center;
   gap: 20px;
+  margin-left: auto;
 }
 .button {
   height: 30px;
-  width: 100px;
-  background: #333;
+  width: 90px;
+  background: #555;
 }
 .burger-menu {
   display: none;
-  height: 30px;
   width: 30px;
+  height: 30px;
   background: #ccc;
 }
+
 main {
-  min-height: calc(100vh - 70px);
-}
-.main-section {
-  width: 1080px;
+  width: 100%;
+  display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
   align-items: center;
 }
-
-.subtitle {
-  width: 500px;
+header {
   max-width: 100%;
-  height: 30px;
-  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
-.title {
-  width: 100%;
-  height: 300px;
+.subtitle {
+  width: 350px;
+  max-width: 80%;
+  height: 30px;
   background: #ccc;
 }
-.images {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  gap: 20px;
-}
-.icon {
-  width: calc((100% - 60px) / 4);
-  height: 100%;
-  background: #eee;
+.title {
+  max-width: 90%;
+  width: 600px;
+  height: 50px;
+  background: #aaa;
 }
 
-@media screen and (max-width: 900px) {
+main section {
+  display: flex;
+  width: 90%;
+  min-height: 200px;
+  margin-top: 20px;
+  border-radius: 50px;
+  background: #eee;
+  overflow: hidden;
+}
+article {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 50px;
+}
+.card {
+  flex: 1;
+  min-width: 40%;
+}
+.description {
+  width: 100%;
+  height: 150px;
+  background: #ccc;
+}
+.card-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background: #999;
+}
+
+aside {
+  width: 50%;
+  background: #ccc;
+}
+
+@media screen and (max-width: 1280px) {
   .search-bar {
     display: none;
   }
   .burger-menu {
     display: block;
   }
-}
-@media screen and (max-width: 600px) {
-  .button {
+  article {
+    width: 100%;
+  }
+  aside {
     display: none;
   }
-  .main-section {
-    margin: 30px 0;
-    justify-content: flex-start;
-  }
-  .images {
-    height: auto;
-    flex-wrap: wrap;
-  }
-  .icon {
-    width: calc((100% - 20px) / 2);
-    height: 150px;
+}
+@media screen and (max-width: 600px) {
+  .card {
+    min-width: 100%;
   }
 }
