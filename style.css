@@ -2,193 +2,208 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   width: 100vw;
   max-width: 100%;
+  background: #fff;
 }
+
 html,
 body,
 div,
 section,
-aside,
 nav,
+footer,
+aside,
+header,
 main {
   box-sizing: border-box;
 }
-body {
-  display: flex;
-}
-aside {
-  height: 100vh;
-  width: 250px;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background: #aaa;
-  padding: 20px;
-}
-.logo {
-  font-size: 30px;
-  font-weight: 900;
-}
-.burger-menu {
+
+.foot-bar {
   display: none;
-  height: 30px;
-  width: 30px;
-  background: #777;
 }
-aside section {
-  width: 100%;
-  max-height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menu {
-  width: 100%;
-  background: #ccc;
-  height: 200px;
-  max-height: 25%;
-}
-.main-page {
-  flex: 1;
-  min-height: fit-content;
-}
+
 nav {
   width: 100%;
   height: 70px;
+  background: #ccc;
   display: flex;
   padding: 0 20px;
   align-items: center;
-  background: #ccc;
-  position: sticky;
-  top: 0;
+  gap: 20px;
 }
-nav > .logo {
+
+.burger-menu {
+  background: #333;
+  width: 40px;
+  height: 40px;
   display: none;
 }
-.search {
-  height: 30px;
-  width: 60%;
-  margin-left: 10%;
-  display: flex;
+
+.logo {
+  font-weight: 900;
+  font-size: 25px;
+}
+.box {
+  height: 20px;
+  width: 100px;
   background: #aaa;
 }
-.search-bar {
+.searchbar {
+  height: 40px;
   flex: 1;
+  background: #999;
 }
-.search-button {
-  width: 100px;
-  height: 100%;
-  background: #777;
+.icon {
+  height: 20px;
+  width: 20px;
+  transform: rotateZ(45deg);
+  background-color: #333;
 }
 .user {
   height: 40px;
   width: 40px;
-  background: #333;
-  margin-left: auto;
   border-radius: 50%;
+  background: #333;
 }
-main {
-  width: 100%;
-  background: #eee;
+.side-bar {
+  max-width: 100%;
+  height: 0;
+  width: 1040px;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+}
+aside {
+  position: relative;
+  top: 20px;
+  width: 300px;
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  gap: 10px;
-}
-.card {
-  height: 15vw;
-  width: calc((100% - 30px) / 4);
+  flex-direction: column;
   background: #ccc;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+  margin-left: auto;
 }
 .image {
+  width: 280px;
+  height: 200px;
+  background: #555;
+}
+.button {
+  height: 50px;
+  width: 200px;
+  background: #333;
+}
+.explanation {
+  width: 280px;
+  height: 400px;
+  background: #aaa;
+}
+
+header {
+  background: #eee;
+}
+header .image {
+  display: none;
+}
+section {
+  max-width: min(100%, 1080px);
+  width: 1080px;
+  margin: 0 auto;
+  padding: 50px 340px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.subtitle {
+  height: 25px;
+  width: 60%;
+  background: #ccc;
+}
+.title {
+  height: 150px;
   width: 100%;
-  height: 75%;
+  background: #aaa;
 }
 .description {
+  height: 100px;
+  width: 80%;
+  background: #ccc;
+}
+.content {
   width: 100%;
-  height: 25%;
-  background: #777;
+  background: #eee;
+}
+.content > header {
+  width: 100%;
+  background: #ddd;
+  padding: 15px 20px;
+}
+.content-name {
+  max-width: 100%;
+  height: 25px;
+  width: 300px;
+  background: #ccc;
+}
+.content footer {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contain {
+  height: 25px;
+  width: 100%;
+  background: #ddd;
 }
 
-@media screen and (max-width: 1280px) {
-  aside {
-    width: 70px;
-  }
-  aside .logo {
-    display: none;
-  }
-  .burger-menu {
-    display: block;
-  }
-  .menu {
-    height: 30px;
-  }
-  nav .logo {
-    display: block;
-  }
-  .card {
-    height: 20vw;
-    width: calc((100% - 20px) / 3);
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .search {
-    margin-left: 5%;
-  }
-  .card {
-    height: 30vw;
-    width: calc((100% - 10px) / 2);
-  }
-}
-@media screen and (max-width: 600px) {
-  body {
-    flex-direction: column;
-    position: relative;
-  }
-  .side-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  aside {
-    position: sticky;
-    top: calc(100% - 70px);
-    margin-top: calc(100% - 70px);
-    width: 100%;
-    height: 70px;
-    flex-direction: row;
-    padding: 0 20px;
-  }
-  .burger-menu {
-    height: 40px;
-    width: 40px;
-  }
-  aside section {
-    flex: 1;
-    width: auto;
-    flex-direction: row;
+@media screen and (max-width: 700px) {
+  nav {
     justify-content: space-between;
   }
-  .menu {
-    height: 40px;
-    width: 40px;
+  .burger-menu {
+    display: block;
   }
-  .search {
+  .searchbar,
+  .box,
+  .icon {
     display: none;
   }
-  .card {
-    height: 50vw;
-    width: 100%;
+  section {
+    padding: 50px 20px;
+    max-width: 100%;
   }
-  main {
-    margin-bottom: 70px;
+
+  header .image {
+    display: block;
+    width: 100%;
+    height: 55vw;
+  }
+  .side-bar {
+    display: none;
+  }
+  .foot-bar {
+    display: block;
+    position: sticky;
+    height: 0;
+    top: calc(100% - 70px);
+  }
+  .foot-bar footer {
+    padding: 0 20px;
+    height: 70px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .explanation {
+    height: 50px;
+    flex: 2;
+  }
+  footer .button {
+    flex: 1;
   }
 }
