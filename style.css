@@ -139,6 +139,12 @@ aside {
   }
 }
 @media screen and (max-width: 600px) {
+  .button {
+    display: none;
+  }
+  article {
+    padding: 30px;
+  }
   .card {
     min-width: 100%;
   }
